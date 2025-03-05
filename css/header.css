@@ -5,12 +5,13 @@
 header {
     background-color: black;
     color: white;
-    padding-inline: 16px;
+    padding: 5px 16px;
+    height: var(--header-height);
 }
 
 nav {
     max-width: 1280px;
-    height: var(--header-height);
+    height: 100%;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -64,12 +65,12 @@ nav {
 }
 
 @media (max-width: 875px) {
+   :root {
+      --header-height: 60px;
+   }
+
     header {
         padding-inline: 12.5px;
-    }
-
-    nav {
-        height: calc(var(--header-height) * 6/7);
     }
 
     #header-title {
@@ -82,13 +83,16 @@ nav {
 
     #menu-list {
         display: none;
+
         position: absolute;
         right: 0;
-        top: calc(var(--header-height) * 6/7);
+        top: calc(var(--header-height));
+	
         flex-direction: column;
         justify-content: center;
         align-items: end;
         gap: 0;
+
         background-color: black;
         border-radius: 0 0 5px 5px;
         padding-block: 7.5px;
@@ -113,12 +117,12 @@ nav {
 }
 
 @media (max-width: 400px) {
+   :root {
+      --header-height: 55px;
+   }
+
     header {
         padding-inline: 10px;
-    }
-
-    nav {
-        height: calc(var(--header-height) * 4/5);
     }
 
     #header-title {
@@ -127,10 +131,6 @@ nav {
     
     #header-title h1 {
         font-size: 20px;
-    }
-
-    #menu-list {
-        top: calc(var(--header-height) * 4/5);
     }
 
     #menu-btn div {
@@ -142,12 +142,12 @@ nav {
 }
 
 @media (max-width: 340px) {
+   :root {
+      --header-height: 50px;
+   }
+
     header {
         padding-inline: 6px;
-    }
-
-    nav {
-        height: calc(var(--header-height) * 2/3);
     }
 
     #header-title {
@@ -156,10 +156,6 @@ nav {
     
     #header-title h1 {
         font-size: 17px;
-    }
-
-    #menu-list {
-        top: calc(var(--header-height) * 2/3);
     }
 
     #menu-btn div {
